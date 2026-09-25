@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#a9161f">
+<title>5 meses con vos — Juan ♡ Brick</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --red:#a9161f;--red2:#d22b36;--red3:#7d0f16;--ink:#171315;--ink2:#40383b;
+  --paper:#fffdf8;--paper2:#f7f0e7;--paper3:#efe7dc;--cream:#fff8ef;
+  --gray:#d9d0c5;--muted:#776b70;--shadow:#bdb3a7;--yellow:#f2d37b;
+  --radius:14px;--max:1220px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#cbc4bc}
+body{margin:0;color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;background:#d7d0c7;overflow-x:hidden}
+button,input,textarea,select{font:inherit}
+button{color:inherit}
+a{color:inherit}
+::selection{background:#f3c7ca;color:#5e0c12}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-2;background:
+ radial-gradient(circle at 15% 20%,rgba(169,22,31,.10),transparent 25%),
+ radial-gradient(circle at 90% 40%,rgba(169,22,31,.07),transparent 28%),
+ repeating-linear-gradient(0deg,rgba(74,60,51,.035) 0 1px,transparent 1px 5px)}
+.page{width:min(var(--max),96vw);margin:24px auto;background:var(--paper);min-height:100vh;box-shadow:9px 11px 0 #b7aea4,0 28px 80px rgba(42,35,32,.25);position:relative;overflow:hidden;border:1px solid rgba(55,45,42,.18)}
+.page:after{content:"";position:absolute;inset:0;pointer-events:none;z-index:30;opacity:.12;mix-blend-mode:multiply;background-image:radial-gradient(#5d534b .55px,transparent .55px);background-size:7px 7px}
+.hand{font-family:'Patrick Hand',cursive}.marker{font-family:'Permanent Marker',cursive}.red{color:var(--red)}
+.nav{position:sticky;top:0;z-index:50;background:rgba(169,22,31,.96);color:#fff;display:flex;align-items:center;gap:18px;padding:11px 22px;border-bottom:3px solid #770c13;box-shadow:0 5px 18px rgba(50,8,10,.18);backdrop-filter:blur(8px)}
+.nav-brand{font-family:'Permanent Marker';font-size:20px;margin-right:auto;white-space:nowrap;transform:rotate(-1deg)}
+.nav-links{display:flex;gap:16px;align-items:center;overflow:auto;scrollbar-width:none}.nav-links::-webkit-scrollbar{display:none}
+.nav a{text-decoration:none;font-family:'Patrick Hand';font-size:19px;white-space:nowrap;opacity:.95}.nav a:hover{opacity:1;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}
+.nav-mini{border:1.5px solid rgba(255,255,255,.75);background:rgba(255,255,255,.08);color:#fff;border-radius:999px;padding:5px 10px;font-size:14px;white-space:nowrap}
+.hero{min-height:680px;padding:76px 7% 64px;display:grid;grid-template-columns:minmax(0,1.12fr) minmax(320px,.88fr);gap:50px;align-items:center;position:relative;border-bottom:3px solid var(--ink);background:linear-gradient(105deg,#fffdf8 0 63%,#f7eee7 63%)}
+.hero:before{content:"";position:absolute;left:-25px;top:100px;width:125px;height:30px;background:rgba(200,32,42,.75);transform:rotate(-7deg)}
+.hero-copy{position:relative;z-index:2}.stamp{display:inline-flex;align-items:center;gap:8px;border:3px solid var(--red);color:var(--red);padding:7px 13px;font-family:'Patrick Hand';font-weight:700;font-size:19px;transform:rotate(-2deg);background:#fffaf8;box-shadow:2px 2px 0 #efd3d5}
+.hero h1{font-family:'Permanent Marker';font-size:clamp(64px,8.7vw,118px);line-height:.84;letter-spacing:-3px;margin:24px 0 20px;color:var(--red);text-shadow:4px 4px 0 #efd4d4;transform:rotate(-.6deg)}
+.hero h1 small{display:block;font-size:.52em;color:var(--ink);letter-spacing:-1px;margin-top:11px}
+.hero-lead{font-family:'Patrick Hand';font-size:clamp(24px,2.6vw,31px);line-height:1.28;max-width:720px;margin:0 0 26px}.hero-lead strong{background:linear-gradient(transparent 64%,#f2c7c9 64%)}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center}.btn{border:2px solid var(--ink);background:#fff;color:var(--ink);padding:12px 16px;border-radius:9px;font-weight:700;cursor:pointer;box-shadow:4px 5px 0 var(--ink);transition:.18s transform,.18s box-shadow,.18s background;text-decoration:none;display:inline-flex;align-items:center;gap:8px}.btn:hover{transform:translate(2px,2px);box-shadow:2px 3px 0 var(--ink)}.btn.primary{background:var(--red);color:#fff;border-color:var(--red3);box-shadow:4px 5px 0 var(--red3)}.btn.ghost{background:transparent}.btn.small{padding:8px 10px;box-shadow:3px 3px 0 var(--ink);font-size:14px}.btn.danger{background:#fff1f1;color:#8c0d15;border-color:#8c0d15;box-shadow:3px 3px 0 #8c0d15}
+.hero-board{position:relative;min-height:500px;display:grid;place-items:center}.board{width:min(470px,100%);background:#fff;border:2px solid var(--ink);padding:30px 28px 25px;box-shadow:10px 12px 0 #d4c9be;transform:rotate(2deg);position:relative}.board:before,.polaroid:before,.letter:before{content:"";position:absolute;width:105px;height:24px;background:rgba(201,39,48,.76);top:-13px;left:50%;transform:translateX(-50%) rotate(-4deg)}
+.board-title{font-family:'Permanent Marker';font-size:28px;color:var(--red);margin-bottom:18px}.board ul{padding-left:20px;margin:0}.board li{font-family:'Patrick Hand';font-size:22px;line-height:1.25;margin:10px 0}.scribble{position:absolute;font-family:'Permanent Marker';color:var(--red);font-size:36px;transform:rotate(-12deg)}.s1{top:18px;right:4%}.s2{bottom:28px;left:3%;font-size:28px}.s3{right:7%;bottom:80px;font-size:25px;color:var(--ink)}
+.counter-strip{position:absolute;right:7%;bottom:25px;background:var(--ink);color:#fff;padding:10px 14px;transform:rotate(-1deg);font-family:'Patrick Hand';font-size:18px;box-shadow:4px 4px 0 var(--red)}
+.section{padding:82px 7%;position:relative}.section.alt{background:var(--paper2);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}.section.dark{background:var(--ink);color:#fff}.section-head{display:flex;gap:22px;align-items:flex-end;justify-content:space-between;margin-bottom:34px}.eyebrow{font-family:'Patrick Hand';font-size:19px;color:var(--red);font-weight:700;letter-spacing:.04em;text-transform:uppercase}.section h2{font-family:'Permanent Marker';font-size:clamp(38px,5vw,58px);line-height:1.05;margin:3px 0 10px;color:var(--red);transform:rotate(-.4deg)}.section-intro{font-family:'Patrick Hand';font-size:23px;line-height:1.35;max-width:820px;margin:0}.section.dark h2{color:#fff}.section.dark .section-intro{color:#eee}
+.kicker-note{font-family:'Patrick Hand';font-size:18px;background:#fff4bd;color:#4b3e18;border:1.5px solid #7a672d;padding:12px 14px;box-shadow:4px 4px 0 #d8c679;transform:rotate(1.2deg);max-width:300px}
+.timeline-rail{display:flex;gap:8px;align-items:center;overflow:auto;padding:7px 2px 16px;margin:12px 0 35px;scrollbar-width:thin}.rail-dot{flex:0 0 auto;text-decoration:none;border:2px solid var(--ink);background:#fff;padding:9px 13px;border-radius:999px;font-family:'Patrick Hand';font-size:18px;box-shadow:2px 3px 0 var(--ink)}.rail-dot:hover{background:#ffecee}.rail-dot span{color:var(--red);font-weight:700}
+.chapter{position:relative;margin:0 0 86px;scroll-margin-top:90px}.chapter:last-child{margin-bottom:20px}.chapter-marker{display:grid;grid-template-columns:95px 1fr;gap:28px;align-items:start}.chapter-index{position:sticky;top:84px;width:86px;height:86px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font-family:'Permanent Marker';font-size:30px;border:3px solid var(--ink);box-shadow:5px 6px 0 var(--ink);transform:rotate(-4deg);z-index:2}.chapter-body{min-width:0}.chapter-top{display:flex;gap:18px;justify-content:space-between;align-items:flex-start;border-bottom:3px dashed var(--red);padding-bottom:18px}.chapter-date{font-family:'Patrick Hand';font-size:20px;color:var(--red);font-weight:700}.chapter h3{font-family:'Permanent Marker';font-size:clamp(31px,4vw,46px);line-height:1.07;margin:5px 0 0;color:var(--ink)}.chapter-tag{font-family:'Patrick Hand';font-size:18px;border:2px solid var(--red);color:var(--red);padding:5px 11px;transform:rotate(2deg);white-space:nowrap;background:#fff}
+.story-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(280px,.85fr);gap:28px;margin-top:28px}.story-copy{font-family:'Patrick Hand';font-size:22px;line-height:1.48}.story-copy p{margin:0 0 17px}.story-copy .pull{font-family:'Permanent Marker';font-size:26px;line-height:1.3;color:var(--red);margin:25px 0;padding-left:18px;border-left:5px solid var(--red);transform:rotate(-.5deg)}.story-aside{background:#fff;border:2px solid var(--ink);padding:22px;box-shadow:6px 7px 0 var(--gray);transform:rotate(1deg);align-self:start}.story-aside h4{font-family:'Permanent Marker';color:var(--red);font-size:22px;margin:0 0 13px}.story-aside p,.story-aside li{font-family:'Patrick Hand';font-size:19px;line-height:1.36}.story-aside ul{margin:0;padding-left:20px}
+.mini-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:24px}.mini-card{border:2px solid var(--ink);background:#fff;padding:16px;box-shadow:4px 4px 0 var(--gray);transform:rotate(var(--r,0deg))}.mini-card b{display:block;font-family:'Permanent Marker';font-size:18px;color:var(--red);margin-bottom:7px}.mini-card span{font-family:'Patrick Hand';font-size:18px;line-height:1.3}
+.science{margin-top:28px;background:var(--ink);color:#fff;border:3px solid var(--red);padding:23px;box-shadow:7px 8px 0 #bdb3a7;transform:rotate(-.4deg)}.science h4{font-family:'Permanent Marker';font-size:25px;margin:0 0 15px;color:#fff}.stat-row{display:grid;grid-template-columns:1fr auto;gap:12px;padding:8px 0;border-bottom:1px dashed #8d7f82;font-family:'Patrick Hand';font-size:20px}.stat-row:last-child{border:0}.stat-row strong{color:#ffd5d7}
+.worldcup{margin-top:25px;border:2px solid var(--ink);background:#fff;padding:20px;position:relative;overflow:hidden}.worldcup:after{content:"⚽";position:absolute;right:-5px;bottom:-26px;font-size:120px;opacity:.10}.worldcup h4{font-family:'Permanent Marker';font-size:24px;color:var(--red);margin:0 0 10px}.worldcup p{font-family:'Patrick Hand';font-size:20px;margin:0;max-width:780px}
+.zomboid-box{margin-top:25px;background:#2b302d;color:#e8eadf;border:3px solid #111;padding:22px;box-shadow:7px 8px 0 #a9a39b;position:relative}.zomboid-box h4{font-family:'Permanent Marker';font-size:24px;color:#e8eadf;margin:0 0 11px}.zomboid-box p{font-family:'Patrick Hand';font-size:20px;margin:0}.zomboid-box:after{content:"THIS IS HOW YOU DIED";position:absolute;right:15px;top:15px;font-size:11px;letter-spacing:.12em;color:#a6aea4}
+.memory-zone{margin-top:30px;border:3px dashed #b52a32;background:linear-gradient(135deg,#fff 0 80%,#fff1f1 80%);padding:22px;position:relative}.memory-zone-title{display:flex;gap:15px;align-items:center;justify-content:space-between;flex-wrap:wrap}.memory-zone h4{font-family:'Permanent Marker';font-size:23px;color:var(--red);margin:0}.memory-zone p{font-family:'Patrick Hand';font-size:18px;margin:5px 0 0}.memory-list{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:22px}.empty-memory{grid-column:1/-1;padding:24px;border:2px dashed #c9bdb4;text-align:center;font-family:'Patrick Hand';font-size:19px;color:#766a69;background:#fffaf7}.memory-card{background:#fff;border:1.5px solid #c8beb4;padding:12px;box-shadow:4px 5px 0 #d4cbc2;transform:rotate(var(--r,0deg));position:relative}.memory-card .memory-img-wrap{position:relative;background:#eee;overflow:hidden;aspect-ratio:4/3;cursor:zoom-in}.memory-card img{width:100%;height:100%;object-fit:cover;display:block}.memory-card h5{font-family:'Permanent Marker';font-size:17px;margin:12px 0 4px;color:var(--red)}.memory-card .meta{font-family:'Patrick Hand';font-size:15px;color:#766a69}.memory-card .desc{font-family:'Patrick Hand';font-size:17px;line-height:1.3;margin:7px 0 5px}.memory-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.icon-btn{border:1.5px solid var(--ink);background:#fff;cursor:pointer;padding:4px 7px;border-radius:6px;font-size:13px}.icon-btn:hover{background:#f5ebe7}.image-count{position:absolute;right:7px;bottom:7px;background:rgba(23,19,21,.83);color:white;font-size:12px;padding:4px 7px;border-radius:999px}
+.future-chapter{margin:30px 0 0 123px;border:3px dashed #b6aaa0;padding:25px;background:#fffdf9;position:relative}.future-chapter h4{font-family:'Permanent Marker';font-size:28px;margin:0;color:#777}.future-chapter p{font-family:'Patrick Hand';font-size:21px;margin:8px 0;color:#706566}.future-chapter:after{content:"...";position:absolute;right:30px;bottom:-7px;font-family:'Permanent Marker';font-size:45px;color:#c5bab1}
+.divider{height:52px;position:relative;margin:8px 0}.divider:before{content:"";position:absolute;left:7%;right:7%;top:25px;border-top:3px dashed var(--red)}.divider span{position:absolute;left:50%;top:5px;transform:translateX(-50%) rotate(-6deg);background:var(--paper);padding:3px 15px;font-family:'Permanent Marker';font-size:23px;color:var(--red)}
+.blame-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}.blame{background:#fff;border:2px solid var(--ink);padding:26px;box-shadow:7px 8px 0 var(--gray);position:relative;overflow:hidden}.blame:nth-child(1){transform:rotate(-1deg)}.blame:nth-child(2){transform:rotate(1.2deg)}.blame .n{position:absolute;right:15px;top:-12px;font-family:'Permanent Marker';font-size:85px;color:#f1d9da;z-index:0}.blame>*{position:relative;z-index:1}.blame h3{font-family:'Permanent Marker';font-size:30px;color:var(--red);margin:0 0 12px}.blame p{font-family:'Patrick Hand';font-size:21px;line-height:1.4;margin:8px 0}.blame .verdict{display:inline-block;margin-top:13px;font-family:'Permanent Marker';color:#fff;background:var(--red);padding:6px 10px;transform:rotate(-3deg)}
+.custom-memory-toolbar{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin:22px 0}.memory-board{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.memory-board .memory-card{padding:14px}.memory-board .memory-card:nth-child(3n+1){--r:-.8deg}.memory-board .memory-card:nth-child(3n+2){--r:.8deg}.memory-board .memory-card:nth-child(3n){--r:-.3deg}
+.letters{display:grid;grid-template-columns:repeat(2,1fr);gap:31px}.letter{background:#fffdf8;border:1px solid #c9c0b5;padding:36px 34px 29px;box-shadow:8px 9px 0 #d9d0c6;position:relative;transform:rotate(var(--r,0deg));min-height:410px}.letter h3{font-family:'Permanent Marker';font-size:29px;color:var(--red);margin:7px 0 20px}.letter p{font-family:'Patrick Hand';font-size:21px;line-height:1.47;margin:0 0 14px}.letter .sign{text-align:right;color:var(--red);font-family:'Patrick Hand';font-size:23px;margin-top:18px}
+.notes-wall{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:start}.note{min-height:185px;background:#fff3ad;border:1px solid #bca95e;padding:22px 18px 18px;box-shadow:4px 5px 0 #c9b96f;transform:rotate(var(--r,0deg));position:relative}.note:nth-child(2n){background:#fff}.note:nth-child(3n){background:#f7e8e8;border-color:#cfa7a9}.note:before{content:"";position:absolute;width:68px;height:15px;background:rgba(211,41,51,.65);top:-8px;left:50%;transform:translateX(-50%) rotate(-5deg)}.note h3{font-family:'Permanent Marker';font-size:20px;margin:0 0 11px;color:var(--red)}.note p{font-family:'Patrick Hand';font-size:18px;line-height:1.32;margin:0}.note.editable{cursor:pointer}.note.editable:hover{transform:rotate(var(--r,0deg)) translateY(-3px)}
+.wishes{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:34px}.wish{border-top:4px solid var(--red);background:#fff;border-left:1px solid #d4cbc2;border-right:1px solid #d4cbc2;border-bottom:1px solid #d4cbc2;padding:21px 16px;min-height:185px;box-shadow:4px 5px 0 #ddd5cc}.wish .num{font-family:'Permanent Marker';font-size:28px;color:var(--red)}.wish h3{font-family:'Permanent Marker';font-size:18px;margin:8px 0 10px}.wish p{font-family:'Patrick Hand';font-size:18px;line-height:1.32;margin:0}.future-space{height:155px;border-left:3px dashed var(--red);margin:45px 0 0 28px;position:relative}.future-space:after{content:"Porque estos cinco meses ya tienen una historia. Y todavía queda muchísimo espacio abajo.";position:absolute;left:25px;top:50px;font-family:'Patrick Hand';font-size:24px;color:var(--red);max-width:700px}
+.counter-card{max-width:920px;margin:0 auto;background:#fff;color:var(--ink);border:3px solid #111;padding:35px;box-shadow:8px 10px 0 var(--red);transform:rotate(-.3deg);text-align:center}.counter-card h3{font-family:'Permanent Marker';font-size:33px;margin:0 0 8px;color:var(--red)}.counter-card>p{font-family:'Patrick Hand';font-size:21px;margin:0 0 26px}.counter-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.count{border:2px solid var(--ink);padding:18px 8px;background:#fff9f8}.count strong{font-family:'Permanent Marker';font-size:34px;color:var(--red);display:block}.count span{font-family:'Patrick Hand';font-size:17px}.and-counting{font-family:'Permanent Marker';font-size:25px;color:#fff;margin-top:27px;transform:rotate(-2deg)}
+.final{min-height:620px;display:grid;place-items:center;text-align:center;padding:100px 7%;background:radial-gradient(circle at 50% 50%,#fff 0 55%,#f6ece5 55%);border-top:3px solid var(--ink);position:relative}.final-inner{max-width:800px}.final h2{font-family:'Permanent Marker';font-size:clamp(72px,10vw,130px);line-height:.8;margin:0;color:var(--red);text-shadow:4px 4px 0 #edd0d2}.final h2 span{display:block;color:var(--ink);font-size:.48em;margin-top:25px}.final h3{font-family:'Permanent Marker';font-size:36px;margin:45px 0 12px;color:var(--red)}.final p{font-family:'Patrick Hand';font-size:25px;line-height:1.42;margin:0 auto 28px;max-width:720px}.footer{background:var(--red);color:#fff;padding:17px;text-align:center;font-family:'Patrick Hand';font-size:17px}
+.to-top{position:fixed;right:22px;bottom:22px;z-index:70;width:48px;height:48px;border-radius:50%;border:2px solid var(--ink);background:#fff;color:var(--red);box-shadow:4px 4px 0 var(--ink);font-weight:900;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(8px);transition:.2s}.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}.reveal.visible{opacity:1;transform:none}
+.modal{position:fixed;inset:0;z-index:100;display:none;place-items:center;background:rgba(22,17,19,.72);padding:20px}.modal.open{display:grid}.modal-card{width:min(720px,100%);max-height:90vh;overflow:auto;background:var(--paper);border:3px solid var(--ink);box-shadow:9px 10px 0 var(--red);padding:26px;position:relative}.modal-card h3{font-family:'Permanent Marker';font-size:29px;margin:0 0 18px;color:var(--red)}.close-modal{position:absolute;right:13px;top:13px;border:2px solid var(--ink);background:#fff;width:34px;height:34px;border-radius:50%;cursor:pointer;font-weight:900}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font-family:'Patrick Hand';font-size:18px;font-weight:700}.field input,.field textarea,.field select{width:100%;border:2px solid #a99e95;background:#fff;padding:10px 11px;border-radius:7px;outline:none}.field textarea{min-height:120px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{border-color:var(--red);box-shadow:0 0 0 3px #f4d9da}.form-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:19px;flex-wrap:wrap}.help{font-family:'Patrick Hand';font-size:16px;color:#766a69;margin:8px 0 0}.file-preview{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}.file-pill{font-size:13px;background:#f2eae4;border:1px solid #c9beb5;border-radius:999px;padding:5px 8px}
+.lightbox{position:fixed;inset:0;z-index:120;background:rgba(10,8,9,.94);display:none;place-items:center;padding:28px}.lightbox.open{display:grid}.lightbox img{max-width:min(1100px,88vw);max-height:82vh;object-fit:contain;box-shadow:0 0 0 2px #fff,0 20px 70px #000}.lightbox-caption{color:#fff;font-family:'Patrick Hand';font-size:20px;text-align:center;margin-top:12px;max-width:800px}.lightbox-close,.lightbox-prev,.lightbox-next{position:absolute;border:1px solid rgba(255,255,255,.6);background:rgba(255,255,255,.08);color:#fff;cursor:pointer}.lightbox-close{right:25px;top:20px;width:43px;height:43px;border-radius:50%;font-size:25px}.lightbox-prev,.lightbox-next{top:50%;transform:translateY(-50%);width:46px;height:58px;font-size:28px}.lightbox-prev{left:20px}.lightbox-next{right:20px}
+.toast{position:fixed;left:50%;bottom:28px;z-index:140;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:11px 16px;border-radius:8px;font-family:'Patrick Hand';font-size:18px;opacity:0;pointer-events:none;transition:.2s;box-shadow:4px 4px 0 var(--red)}.toast.show{opacity:1;transform:translate(-50%,0)}
+.custom-chapters{display:grid;gap:22px;margin:26px 0 0 123px}.custom-chapter{border:2px solid var(--ink);padding:23px;background:#fff;box-shadow:6px 7px 0 var(--gray);position:relative}.custom-chapter h4{font-family:'Permanent Marker';font-size:27px;color:var(--red);margin:0 0 5px}.custom-chapter .date{font-family:'Patrick Hand';font-size:17px;color:#75696d}.custom-chapter p{font-family:'Patrick Hand';font-size:20px;line-height:1.4}.custom-chapter .delete-custom{position:absolute;right:13px;top:13px}
+@media(max-width:980px){
+ .hero{grid-template-columns:1fr;min-height:auto;padding-top:65px}.hero-board{min-height:410px}.counter-strip{position:static;margin-top:22px;display:inline-block}.story-grid{grid-template-columns:1fr}.mini-cards{grid-template-columns:1fr 1fr}.memory-list,.memory-board{grid-template-columns:repeat(2,1fr)}.notes-wall{grid-template-columns:repeat(2,1fr)}.wishes{grid-template-columns:repeat(2,1fr)}.wish:last-child{grid-column:1/-1}.letters{grid-template-columns:1fr}.blame-grid{grid-template-columns:1fr}
+}
+@media(max-width:720px){
+ .page{width:100%;margin:0;border:0;box-shadow:none}.nav{padding:10px 13px;gap:10px}.nav-brand{font-size:17px}.nav-mini{display:none}.hero{padding:56px 6% 50px;background:#fffdf8}.hero h1{font-size:60px;letter-spacing:-2px}.board{padding:25px 20px}.section{padding:61px 6%}.section-head{align-items:flex-start;flex-direction:column}.chapter-marker{grid-template-columns:1fr;gap:13px}.chapter-index{position:static;width:64px;height:64px;font-size:24px}.chapter-top{flex-direction:column}.chapter-tag{white-space:normal}.mini-cards{grid-template-columns:1fr}.memory-list,.memory-board{grid-template-columns:1fr}.future-chapter,.custom-chapters{margin-left:0}.notes-wall{grid-template-columns:1fr}.wishes{grid-template-columns:1fr}.wish:last-child{grid-column:auto}.counter-grid{grid-template-columns:1fr 1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.lightbox-prev{left:6px}.lightbox-next{right:6px}.final{min-height:540px}.to-top{right:12px;bottom:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="page" id="top">
+  <nav class="nav">
+    <div class="nav-brand">Juan ♡ Brick</div>
+    <div class="nav-links">
+      <a href="#historia">historia</a>
+    </div>
+    <div class="nav-mini">25·04·26 → ∞</div>
+  </nav>
+
+  <header class="hero" id="portada">
+    <div class="hero-copy reveal">
+      <span class="stamp">25 DE ABRIL — 25 DE SEPTIEMBRE · 2026</span>
+      <h1>5 meses<br>con vos. <small>cinco meses siendo nosotros.</small></h1>
+      <p class="hero-lead">Hace cinco meses que somos novios y todavía me pasa que pienso en cómo arrancó todo y me da gracia. Pasamos de <strong>rolearnos todos los días</strong> y quedarnos hablando por Discord a esto: querernos un montón, estar metidos en la vida del otro y hacer que hasta un día completamente normal se sienta mejor porque estás vos.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#historia">Empezar nuestro recorrido →</a>
+        <a class="btn ghost" href="#recuerdos">Ver nuestros recuerdos</a>
+      </div>
+      <div class="counter-strip" id="heroCounter">Cinco meses siendo novios. Te amo. Y contando...</div>
+    </div>
+    <div class="hero-board reveal">
+      <div class="board">
+        <div class="board-title">cosas que explican un poco esto:</div>
+        <ul>
+          <li>Shinobi Gaiden y demasiadas horas de Discord.</li>
+          <li>PES, Naruto Storm 4 y zenon de 9 te odio.</li>
+          <li>Un Mundial, Project Zomboid y varias misiones secundarias.</li>
+          <li>Muchos días donde no hicimos “nada” y aun así estuvimos juntos.</li>
+          <li>Brick convirtiéndome en otaku. Sí, queda asentado.</li>
+        </ul>
+      </div>
+      <div class="scribble s1">♡</div>
+      <div class="scribble s2"></div>
+      <div class="scribble s3"></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section" id="historia">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">la parte importante de todo esto</div>
+          <h2>→ nuestra línea de tiempo</h2>
+          <p class="section-intro">No quiero que esto parezca una cronología seria porque nosotros tampoco somos así. Quiero mirar para atrás y acordarme de cómo fuimos pasando de una cosa a otra mientras, casi sin darnos cuenta, ya llevábamos cinco meses siendo novios. Hubo juegos, voices, servidores, días re cargados y otros donde no hicimos una mierda. Y en todos estabas vos.</p>
+        </div>
+      </div>
+
+      <div class="timeline-rail reveal">
+        <a class="rail-dot" href="#cap0"><span>00</span> nos conocimos</a>
+        <a class="rail-dot" href="#cap1"><span>01</span> primer mes</a>
+        <a class="rail-dot" href="#cap2"><span>02</span> 2 meses</a>
+        <a class="rail-dot" href="#cap3"><span>03</span> 3 meses</a>
+        <a class="rail-dot" href="#cap4"><span>04</span> 4 meses</a>
+        <a class="rail-dot" href="#cap5"><span>05</span> cinco meses</a>
+      </div>
+
+      <article class="chapter reveal" id="cap0">
+        <div class="chapter-marker">
+          <div class="chapter-index">00</div>
+          <div class="chapter-body">
+            <div class="chapter-top">
+              <div><div class="chapter-date">Marzo 2026 — Abril 2026</div><h3>Y de alguna manera, terminamos acá.</h3></div>
+              <div class="chapter-tag">todavía no sabíamos nada</div>
+            </div>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>Nos conocimos por marzo/abril, cuando <b>Shinobi Gaiden era básicamente parte de todos nuestros días</b>. Entrábamos a rolear y de alguna manera siempre terminábamos hablando por Discord durante horas. A veces del rol, a veces de algo que había pasado, y muchas otras de absolutamente cualquier pelotudez.</p>
+                <p>Y lo mejor es que no hubo un momento en el que dijéramos “bueno, ahora vamos a empezar a hablar todos los días”. Simplemente pasó. Terminábamos una escena y seguíamos hablando. Cerrábamos el juego y seguíamos en voice. Se hacía tarde y, bueno... un rato más.</p>
+                <p>En algún punto SG dejó de ser la razón por la que hablábamos y pasó a ser solamente el lugar donde nos habíamos encontrado. Ya no necesitábamos que estuviera pasando algo en el servidor. Yo quería hablar con vos porque eras vos. Quería quedarme, saber qué estabas haciendo, escucharte y seguir compartiendo tiempo con vos.</p>
+                <div class="pull">“Todavía no teníamos idea de que íbamos a terminar siendo novios.”</div>
+                <p>Ahora miro para atrás y me da mucha ternura pensar en nosotros en ese momento, porque claramente algo ya estaba pasando y nosotros todavía estábamos ahí, haciendo boludeces y dejando que todo se diera solo. Sin forzarlo, sin planearlo, sin saber que unos meses después yo iba a estar haciendo una página entera por nuestros cinco meses.</p>
+                <p>Y me encanta que haya empezado así. Porque antes de ser mi novio ya eras esa persona con la que siempre quería quedarme un poquito más. Y después, casi sin darnos cuenta, ese “un poquito más” terminó convirtiéndose en nosotros.</p>
+              </div>
+            </div>
+            <div class="memory-zone" data-owner="cap0">
+              <div class="memory-zone-title"><div><h4>▣ uwu</h4><p></p></div><button class="btn small primary add-memory" data-owner="cap0">＋ </button></div>
+              <div class="memory-list" id="memories-cap0"></div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter reveal" id="cap1">
+        <div class="chapter-marker">
+          <div class="chapter-index">01</div>
+          <div class="chapter-body">
+            <div class="chapter-top"><div><div class="chapter-date">Abril → Mayo 2026</div><h3>Bueno... pasó el primer mes.</h3></div><div class="chapter-tag">cambió el juego, no las ganas</div></div>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>Cuando cumplimos el primer mes, sg ya estaba llegando al final de esa etapa. Y era medio raro, porque justamente ahí nos habíamos conocido. Pero para ese momento ya éramos novios y sinceramente daba bastante igual qué pasara con el servidor: <b>yo quería seguir haciendo cosas con vos</b>.</p>
+                <p>Así terminamos probando <b>GTAW </b>. Duramos poco porque el server estaba muriendo por culpa del putisimo rage de los cojones que lo cerraban.</p>
+                <p>Y creo que ahí se empezó a notar algo que después fue cada vez más normal. No importaba tanto qué jugábamos. Si el juego estaba bueno, joya. Si era una mierda, no importa. Si no había nada para jugar, nos quedábamos hablando igual. <b>Yo no quería “jugar a algo”; quería pasar tiempo con vos.</b></p>
+                <p>Ese primer mes fue eso. Ir acostumbrándome a decir “mi novio”, a tenerte cada vez más metido en mi día y a darme cuenta de que no necesitábamos un plan espectacular para pasarla bien. Con vos alcanzaba bastante.</p>
+                <div class="mini-cards">
+                  <div class="mini-card" style="--r:-1deg"><b>cambiar de server</b><span>porque aparentemente necesitábamos otra excusa para seguir roleando (no sirvió :pensive:).</span></div>
+                  <div class="mini-card" style="--r:1deg"><b>hablar igual</b><span>voices todos los dias uwu</span></div>
+                  <div class="mini-card" style="--r:-.4deg"><b>hacer tiempo juntos</b><span>siempre absolutamente siemre :3.</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="memory-zone" data-owner="cap1"><div class="memory-zone-title"><div><h4>▣ owo</h4><p></p></div><button class="btn small primary add-memory" data-owner="cap1">＋ </button></div><div class="memory-list" id="memories-cap1"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter reveal" id="cap2">
+        <div class="chapter-marker">
+          <div class="chapter-index">02</div>
+          <div class="chapter-body">
+            <div class="chapter-top"><div><div class="chapter-date">Mayo → Junio 2026</div><h3>Dos personas, y demasiadas horas.</h3></div><div class="chapter-tag">Konami en investigación</div></div>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>El segundo mes fue mucho más caótico y bastante más nosotros. <b>PES, Naruto Storm 4 (gracias rikuto por prestar el steam), cualquier otro juego que apareciera</b> y, muchas veces, absolutamente nada. Había días donde literalmente el plan era entrar a voice y ver qué terminábamos haciendo.</p>
+                <p>Podíamos decir “vamos a jugar un rato” y terminar horas después hablando de cualquier pelotudez que no tenía nada que ver. O jugar PES, empezar a discutir porque claramente Konami estaba operando en mi contra y después seguir juntos como si nada.</p>
+                <p>Y me encanta eso de nosotros. Que no siento que tengamos que estar haciendo algo todo el tiempo para disfrutar estar juntos. Me gusta jugar con vos, obvio, pero también me gusta simplemente tenerte ahí. Escucharte. Hablarte. Molestarte. Que me molestes. Pasar horas sin darnos cuenta.</p>
+                <p>Ahora, sobre el PES, dejo asentado algo importante para la posteridad: <b>te domé</b>. Si aparece evidencia en contra, está manipulada. Y si Zenón de 9 se transforma en Maradona Prime, eso ya es un problema directo de Konami y no mío.</p>
+                <div class="science">
+                  <h4>estadísticas completamente científicas</h4>
+                  <div class="stat-row"><span>Partidos de PES jugados</span><strong>demasiados</strong></div>
+                  <div class="stat-row"><span>Veces que te domé</span><strong>incontables</strong></div>
+                  <div class="stat-row"><span>Veces que Konami me cagó la experiencia de juego</span><strong>todas</strong></div>
+                  <div class="stat-row"><span>Tiempo juntos</span><strong>perdimos la noción</strong></div>
+                </div>
+              </div>
+            </div>
+            <div class="memory-zone" data-owner="cap2"><div class="memory-zone-title"><div><h4>▣ owo</h4><p>codex de mierda me hizo esta seccion vacia y si la quito rompo toda la pagina</p></div><button class="btn small primary add-memory" data-owner="cap2">＋</button></div><div class="memory-list" id="memories-cap2"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter reveal" id="cap3">
+        <div class="chapter-marker">
+          <div class="chapter-index">03</div>
+          <div class="chapter-body">
+            <div class="chapter-top"><div><div class="chapter-date">Junio → Julio 2026</div><h3>Mes del Mundial :party:</h3></div><div class="chapter-tag">menos juegos, misma presencia</div></div>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>En el tercer mes no estábamos tan viciados a mil juegos como antes. Y la verdad, nunca sentí que faltara algo. <b>Seguíamos hablando todos los días</b>, seguíamos buscándonos, contándonos cosas y estando presentes aunque cada uno estuviera haciendo la suya.</p>
+                <p>Había días donde hablábamos un montón y otros donde simplemente nos hacíamos compañía. Y me gustaba igual. Porque para ese punto ya no necesitaba que tuviéramos “algo para hacer” para querer estar con vos. Eras mi novio, te amaba y me gustaba compartir mi día con vos aunque ese día no tuviera nada interesante.</p>
+                <p>Creo que ahí entendí una de las cosas que más amo de nuestra relación: podemos estar juntos sin estar forzando nada. No necesito entretenerte cada segundo ni que vos me entretengas a mí. Podemos simplemente estar, y se siente bien.</p>
+                <div class="pull">A veces no hacíamos nada. Pero lo estaba haciendo con vos, y para mí eso ya era un montón.</div>
+                <p>Encima fue mes del Mundial, así que obviamente había partidos y cosas para hablar. Pero si tengo que acordarme de algo de ese mes no es de un partido puntual: es de que, pasara lo que pasara en el día, <b>yo seguía queriendo terminar hablándote a vos</b>.</p>
+              </div>
+              <aside class="story-aside"><h4>un mes más tranqui</h4><p>No pasó menos porque jugáramos menos. Seguíamos siendo nosotros, seguíamos hablando todos los días y yo seguía teniendo ganas de estar con vos. Para mí eso ya dice bastante.</p></aside>
+            </div>
+            <div class="memory-zone" data-owner="cap3"><div class="memory-zone-title"><div><h4>▣ owo.</h4></div><button class="btn small primary add-memory" data-owner="cap3">＋</button></div><div class="memory-list" id="memories-cap3"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter reveal" id="cap4">
+        <div class="chapter-marker">
+          <div class="chapter-index">04</div>
+          <div class="chapter-body">
+            <div class="chapter-top"><div><div class="chapter-date">Julio → Agosto 2026</div><h3>Tu etapa Project Zomboid.</h3></div><div class="chapter-tag">yo mirando el desastre</div></div>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>Después vino <b>tu etapa Project Zomboid</b>. Te recontra viciaste. Nosotros casi ni jugábamos juntos y, aun así, siento que estuve bastante metido en esa etapa porque me quedaba acompañándote mientras jugabas.</p>
+                <p>Miraba lo que hacías, te daba mi opinión, comentábamos lo que iba pasando y cada tanto seguramente te decía que estabas por hacer una pelotudez. Y aunque yo no estuviera manejando un personaje al lado tuyo, para mí seguíamos compartiendo el momento.</p>
+                <p>Además me gustaba verte disfrutarlo. Suena re simple, pero es eso. Cuando amás a alguien también te termina haciendo feliz verlo emocionado con sus cosas, aunque no sean exactamente tus cosas. Yo podía quedarme ahí mirando lo que me mandabas de luisito guerrero y pasarla bien solamente porque compartia con vos.</p>
+                <div class="pull">No tenía que estar jugando con vos. A veces acompañarte ya era suficiente.</div>
+              </div>
+            </div>
+            <div class="memory-zone" data-owner="cap4"><div class="memory-zone-title"><div><h4>▣ owo</h4><p></p></div><button class="btn small primary add-memory" data-owner="cap4">＋ </button></div><div class="memory-list" id="memories-cap4"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="chapter reveal" id="cap5">
+        <div class="chapter-marker">
+          <div class="chapter-index">05</div>
+          <div class="chapter-body">
+            <div class="chapter-top"><div><div class="chapter-date">Agosto → Septiembre 2026</div><h3>Cinco meses después...</h3></div><div class="chapter-tag">cinco meses siendo novios ♡</div></div>
+            <div class="story-grid">
+              <div class="story-copy">
+                <p>Y llegamos a los cinco meses. Cinco meses de novios. Cinco meses queriéndote cada vez más, conociéndote más y sintiéndome cada vez más cómodo con vos. Obviamente cambiaron cosas desde abril. Nosotros también cambiamos. Pero hay algo que no cambió: <b>seguimos eligiéndonos todos los días</b>.</p>
+                <p>Nos puisimos a jugar juntos a Project Zomboid y, porque nuestra vida aparentemente necesita lore hasta para jugar tranquilos, <b>el staff corrupto hizo de las suyas</b> (y vos tambien t1, fuck t1) </p>
+                <p>Y lo que siento hoy. No siento que estos cinco meses sean algo mas. Para nada. Los siento como el principio de un montón de cosas que todavía no sabemos que van a pasar. <b>Y quiero vivirlas con vos.</b></p>
+                <div class="pull">No sé qué vamos a terminar haciendo después. Sí sé que quiero seguir haciéndolo con vos.</div>
+                <p>Capaz encontramos otro juego, capaz volvemos a uno viejo, capaz nos viciamos con cualquier cosa o pasamos una noche entera hablando de una pelotudez. Me da igual. Te amo, sos mi novio y quiero seguir sumando días, meses, voices, juegos y todas esas cosas chiquitas que terminaron siendo tan nuestras.</p>
+              </div>
+            </div>
+            <div class="memory-zone" data-owner="cap5"><div class="memory-zone-title"><div><h4>▣ owo uwu</h4><p>:3</p></div><button class="btn small primary add-memory" data-owner="cap5">＋ </button></div><div class="memory-list" id="memories-cap5"></div></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="future-chapter reveal">
+        <h4>Próximo capítulo: todavía no sabemos.</h4>
+        <p>Pero quiero llegar a él con vos. Y sí, seguramente terminemos haciendo alguna pelotudez.</p>
+        <button class="btn small" id="addChapterBtn">＋ Agregar un capítulo futuro</button>
+      </div>
+      <div class="custom-chapters" id="customChapters"></div>
+    </section>
+
+    <div class="divider"><span>culpable</span></div>
+
+    <section class="section alt" id="culpas">
+      <div class="section-head reveal"><div><div class="eyebrow">cosas que hiciste y probablemente no sabías que iban a terminar acá</div><h2>El expediente Brick</h2><p class="section-intro">Te amo muchísimo, pero eso no significa que vayas a salir impune de algunas cosas. Después de cinco meses, corresponde dejar ciertos cargos oficialmente asentados.</p></div></div>
+      <div class="blame-grid">
+        <article class="blame reveal"><div class="n">1</div><h3>Me hiciste otaku &gt;:(</h3><p>Me hiciste ver <b>Wistoria</b> con vos. YO. Mirando anime. Esto hace cinco meses parecía imposible, así que quiero que quede bien claro quién es responsable.</p><span class="verdict">CULPA TUYA ♡</span></article>
+        <article class="blame reveal"><div class="n">2</div><h3>Te domé en el PES.</h3><p>No voy a desarrollar demasiado porque los hechos hablan por sí solos. Te domé. Fin del comunicado.</p><p>Ahora, si Konami decide que <b>Zenón de 9 es Maradona Prime</b> y pasan cosas completamente ilegales, eso escapa de mis manos. Algunos partidos directamente deberían ser investigados.</p><span class="verdict">.</span></article>
+      </div>
+    </section>
+
+
+
+    <section class="section alt" id="cartas">
+      <div class="section-head reveal"><div><div class="eyebrow">esto ya es un poco más personal</div><h2>Cosas que quería decirte</h2><p class="section-intro">Porque te amo, porque sos mi novio y porque hay cosas que por Discord capaz termino diciendo a medias, haciendo un chiste o cambiando de tema.</p></div></div>
+      <div class="letters">
+        <article class="letter reveal" style="--r:-.7deg"><h3>Para vos.</h3><p>Te amo. Podría intentar arrancar esto con algo más elaborado, pero la verdad es esa y es lo que más ganas tengo de decirte.</p><p>Hace cinco meses que sos mi novio y en este tiempo te volviste una parte enorme de mis días.</p><p>Me hace muy feliz estar con vos. No porque todos los días sean increíbles ni porque hagamos algo especial todo el tiempo. Me hace feliz porque sos vos. Porque me gusta cómo somos juntos, cómo nos jodemos, cómo hablamos.</p><p>Y sí, capaz una página entera por cinco meses es un montón. Pero también soy yo intentando guardar un pedacito de todo lo que significás para mí ahora. Te amo muchísimo, Brick.</p><div class="sign">— Juan ♡</div></article>
+        <article class="letter reveal" style="--r:.8deg"><h3>Gracias por estar.</h3><p>Gracias por todos esos días donde no pasó absolutamente nada importante y aun así terminamos juntos. Por los voices sin motivo, por quedarte hablando conmigo, por escucharme, por contarme tus cosas y por hacerme un lugar en tu día.</p><p>Me gusta mucho que con vos no sienta que tengo que estar inventando planes para que valga la pena. Podemos jugar algo o podemos no hacer una mierda. Podemos estar cada uno en la suya. Igual me siento cerca tuyo.</p><p>Y capaz eso suena como algo chico, pero para mí no lo es. Tener una persona con la que puedo ser yo, estar tranquilo y sentirme querido es enorme. Gracias por darme eso estos cinco meses. Y gracias por dejarme quererte de la forma en que te quiero.</p><div class="sign">— incluso en los días más normales.</div></article>
+        <article class="letter reveal" style="--r:-.4deg"><h3>Lo que más amo de nosotros.</h3><p>Amo que podamos ser dos pelotudos juntos. Lo digo completamente en serio.</p><p>Amo que una charla pueda empezar con algo importante y terminar en una discusión ridícula. Que tengamos chistes que a otra persona no le causarían absolutamente nada. Que te pueda romper las bolas, que vos me las rompas a mí y que cinco minutos después estemos hablando como si nada.</p><p>Pero más que eso, amo la confianza que tengo con vos. <b>Con vos puedo ser yo.</b> No siento que tenga que medir cada cosa que digo, hacerme el interesante ni convertir cada momento en algo romántico para saber que nos amamos. Podemos decirnos “te amo” y después discutir por el idioteces. Esa mezcla también somos nosotros y no la cambiaría.</p><div class="sign">— te amo mucho uwu</div></article>
+        <article class="letter reveal" style="--r:.6deg"><h3>Si algún día volvés a leer esto.</h3><p>Ojalá cuando vuelvas a abrir esta página haya quedado vieja. Ojalá cinco meses nos parezcan poquísimo porque ya llevemos muchísimos más.</p><p>Quiero que te acuerdes de nosotros ahora. De septiembre de 2026, de todo lo que veníamos haciendo, de nuestros juegos, nuestros voices, nuestras boludeces y de mí sentado haciendo una página porque quería regalarte algo que fuera bien nuestro.</p><p>Capaz para ese momento ya tenemos otras obsesiones, otros chistes y veinte historias nuevas que hoy ni existen. Ojalá. Quiero que esta página se vaya llenando y que algún día podamos bajar hasta acá y pensar “mirá todo lo que vivimos después”.</p><p>Y si de verdad estamos leyendo esto mucho más adelante: hola, amor. Te amaba muchísimo cuando escribí esto. Espero que ya lo sepas, pero igual quería dejarlo escrito.</p><div class="sign">— Juan, septiembre de 2026.</div></article>
+        <article class="letter reveal" style="--r:-.3deg;grid-column:1/-1"><h3>Cinco meses de novios.</h3><p>felices cinco meses, amor. No sé cómo decir esto sin que suene demasiado cursi, así que prefiero decirlo como me sale: <b>soy muy feliz con vos</b>.</p><p>En cinco meses pasaron un montón de cosas y al mismo tiempo siento que lo que más recuerdo son las cosas normales. Estar en voice. Jugar. Verte jugar. Hablar hasta cualquier hora. Reírnos de algo estúpido. Mandarnos cosas. Extrañarte. Decirte te amo. Saber que sos mi novio y sonreír un poquito por eso aunque ya hayan pasado cinco meses.</p><p>Te amo por quién sos y por cómo me siento cuando estoy con vos. Amo nuestra confianza, nuestras boludeces y hasta esas pequeñas cosas que probablemente nunca pondríamos en una “historia romántica” porque sólo las entendemos nosotros. Para mí ahí está justamente lo lindo.</p><p>No sé qué vamos a hacer el mes que viene ni qué juego nos va a consumir después. Lo que sí sé es que quiero seguir estando con vos. Quiero seguir conociéndote, acompañándote, molestándote, queriéndote y sumando cosas a esta página hasta que cinco meses nos parezcan el principio de algo muchísimo más largo.</p><div class="sign">— te amo muchísimo, Brick. ♡</div></article>
+      </div>
+    </section>
+
+    <section class="section alt" id="futuro">
+      <div class="section-head reveal"><div><div class="eyebrow">porque cinco meses recién empiezan</div><h2>5 cosas que quiero seguir haciendo con vos</h2><p class="section-intro">No necesito prometerte una vida de película. Quiero algo mucho más simple: seguir teniendo esto que tenemos, seguir amándonos y seguir sumando nuestras cosas.</p></div></div>
+      <div class="wishes">
+        <article class="wish reveal"><div class="num">01</div><h3>Seguir jugando juntos.</h3><p>A lo que sea. Incluso si el juego es una mierda, lo que importa es que compartamos tiempo.</p></article>
+        <article class="wish reveal"><div class="num">02</div><h3>Seguir hablando hasta cualquier hora.</h3><p>De cosas importantes, de nuestras vidas o de una boludez que empezó hace tres horas y todavía no sabemos cómo terminó ahí.</p></article>
+        <article class="wish reveal"><div class="num">04</div><h3>Seguir acompañándonos.</h3><p>Estar para vos cuando estés haciendo tus cosas y saber que vos también estás para mí. Sin necesidad de que todo sea un plan de pareja.</p></article>
+        <article class="wish reveal"><div class="num">05</div><h3>Seguir amandote así.</h3><p>Y seguir llenando esta página hasta que tenga tantos recuerdos que sea imposible explicar nuestra historia en cinco capítulos.</p></article>
+      </div>
+      <div class="future-space reveal"></div>
+    </section>
+
+    <section class="section dark" id="contador">
+      <div class="counter-card reveal">
+        <h3>desde el 25 de abril de 2026</h3>
+        <p>Porque claramente necesitaba saber exactamente cuánto tiempo llevo teniendo la suerte de llamarte mi novio.</p>
+        <div class="counter-grid"><div class="count"><strong id="cMonths">5</strong><span>meses completos</span></div><div class="count"><strong id="cDays">0</strong><span>días</span></div><div class="count"><strong id="cHours">0</strong><span>horas</span></div><div class="count"><strong id="cMinutes">0</strong><span>minutos</span></div></div>
+      </div>
+      <div class="and-counting reveal" style="text-align:center">Y contando... con vos ♡</div>
+    </section>
+
+    <section class="final" id="final">
+      <div class="final-inner reveal"><h2>FIN...<span>...por ahora.</span></h2><h3>Te amo, Brick.</h3><p>felices cinco meses, amor. Gracias por estos meses siendo mi novio, por todas los voices, los juegos, las pelotudeces y, sobre todo, por hacerme tan feliz estando conmigo. Te amo muchísimo.</p><a class="btn primary" href="#top">Volver al principio ♡</a></div>
+    </section>
+  </main>
+  <footer class="footer"> · 25/09/2026 · felices cinco meses, amor ♡</footer>
+</div>
+
+<button class="to-top" id="toTop" title="Volver arriba">↑</button>
+<div class="toast" id="toast"></div>
+
+<div class="modal" id="memoryModal" aria-hidden="true">
+  <div class="modal-card">
+    <button class="close-modal" data-close="memoryModal">×</button>
+    <h3 id="memoryModalTitle">Agregar recuerdo</h3>
+    <form id="memoryForm">
+      <input type="hidden" id="memoryId"><input type="hidden" id="memoryOwner">
+      <div class="form-grid">
+        <div class="field"><label for="memoryTitle">Título</label><input id="memoryTitle" maxlength="90" placeholder="Ej: Esa voice eterna"></div>
+        <div class="field"><label for="memoryDate">Fecha</label><input id="memoryDate" type="date"></div>
+        <div class="field"><label for="memoryCategory">Categoría</label><select id="memoryCategory"><option>Recuerdo</option><option>Juego</option><option>voice</option><option>Captura</option><option>Boludez</option><option>Especial</option></select></div>
+        <div class="field"><label for="memoryEmoji">Emoji / icono</label><input id="memoryEmoji" maxlength="8" placeholder="♡ /<3 / ☎"></div>
+        <div class="field full"><label for="memoryDescription">Descripción</label><textarea id="memoryDescription" placeholder="Contá qué querés recordar. No hace falta escribir una novela."></textarea></div>
+        <div class="field full" id="memoryFilesField"><label for="memoryFiles">Imágenes</label><input id="memoryFiles" type="file" accept="image/*" multiple><div class="help">Podés elegir varias. Se guardan dentro de IndexedDB en este navegador.</div><div class="file-preview" id="filePreview"></div></div>
+      </div>
+      <div class="form-actions"><button type="button" class="btn" data-close="memoryModal">Cancelar</button><button class="btn primary" type="submit">Guardar recuerdo</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="chapterModal" aria-hidden="true">
+  <div class="modal-card"><button class="close-modal" data-close="chapterModal">×</button><h3>Agregar un capítulo futuro</h3><form id="chapterForm"><div class="form-grid"><div class="field"><label>Título</label><input id="chapterTitle" required maxlength="100" placeholder="Ej: Sexto mes"></div><div class="field"><label>Fecha / etapa</label><input id="chapterDate" maxlength="80" placeholder="Septiembre → Octubre 2026"></div><div class="field full"><label>Texto</label><textarea id="chapterText" required placeholder="Escribí qué pasó en este nuevo capítulo..."></textarea></div></div><div class="form-actions"><button type="button" class="btn" data-close="chapterModal">Cancelar</button><button class="btn primary" type="submit">Agregar capítulo</button></div></form></div>
+</div>
+
+<div class="modal" id="noteModal" aria-hidden="true">
+  <div class="modal-card" style="max-width:560px"><button class="close-modal" data-close="noteModal">×</button><h3>Nuevo papelito</h3><form id="noteForm"><div class="form-grid"><div class="field full"><label>Título</label><input id="noteTitle" maxlength="60" required placeholder="No preguntes."></div><div class="field full"><label>Texto</label><textarea id="noteText" required maxlength="260" placeholder="Algo que sólo nosotros entenderíamos..."></textarea></div></div><div class="form-actions"><button type="button" class="btn" data-close="noteModal">Cancelar</button><button class="btn primary" type="submit">Pegar en el muro</button></div></form></div>
+</div>
+
+<div class="lightbox" id="lightbox" aria-hidden="true"><button class="lightbox-close" id="lightboxClose">×</button><button class="lightbox-prev" id="lightboxPrev">‹</button><div><img id="lightboxImg" alt="Recuerdo ampliado"><div class="lightbox-caption" id="lightboxCaption"></div></div><button class="lightbox-next" id="lightboxNext">›</button></div>
+
+<script>
+(() => {
+'use strict';
+const DB_NAME='juan_brick_5m_db';
+const DB_VERSION=1;
+let db;
+let currentLightbox=[];
+let currentLightboxIndex=0;
+let objectUrls=[];
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const toast=(msg)=>{const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),2300)};
+const escapeHTML=s=>(s??'').toString().replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+
+function openDB(){return new Promise((resolve,reject)=>{const req=indexedDB.open(DB_NAME,DB_VERSION);req.onupgradeneeded=e=>{const d=e.target.result;if(!d.objectStoreNames.contains('memories')){const s=d.createObjectStore('memories',{keyPath:'id',autoIncrement:true});s.createIndex('owner','owner',{unique:false})}if(!d.objectStoreNames.contains('images')){const s=d.createObjectStore('images',{keyPath:'id',autoIncrement:true});s.createIndex('memoryId','memoryId',{unique:false})}};req.onsuccess=()=>{db=req.result;resolve(db)};req.onerror=()=>reject(req.error)})}
+function store(name,mode='readonly'){return db.transaction(name,mode).objectStore(name)}
+const reqP=req=>new Promise((res,rej)=>{req.onsuccess=()=>res(req.result);req.onerror=()=>rej(req.error)});
+async function dbAdd(name,data){return reqP(store(name,'readwrite').add(data))}
+async function dbPut(name,data){return reqP(store(name,'readwrite').put(data))}
+async function dbDelete(name,id){return reqP(store(name,'readwrite').delete(Number(id)))}
+async function dbGet(name,id){return reqP(store(name).get(Number(id)))}
+async function byIndex(name,index,val){return reqP(store(name).index(index).getAll(val))}
+async function all(name){return reqP(store(name).getAll())}
+
+function openModal(id){const m=document.getElementById(id);m.classList.add('open');m.setAttribute('aria-hidden','false')}
+function closeModal(id){const m=document.getElementById(id);m.classList.remove('open');m.setAttribute('aria-hidden','true')}
+$$('[data-close]').forEach(b=>b.addEventListener('click',()=>closeModal(b.dataset.close)));
+$$('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)closeModal(m.id)}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){ $$('.modal.open').forEach(m=>closeModal(m.id)); closeLightbox(); }});
+
+function resetMemoryForm(owner='global'){$('#memoryForm').reset();$('#memoryId').value='';$('#memoryOwner').value=owner;$('#memoryModalTitle').textContent=owner==='global'?'Crear recuerdo':'Agregar recuerdo al capítulo';$('#filePreview').innerHTML='';$('#memoryFilesField').style.display='grid'}
+$$('.add-memory').forEach(b=>b.addEventListener('click',()=>{resetMemoryForm(b.dataset.owner);openModal('memoryModal')}));
+const addGlobalMemoryBtn=$('#addGlobalMemory');if(addGlobalMemoryBtn)addGlobalMemoryBtn.addEventListener('click',()=>{resetMemoryForm('global');openModal('memoryModal')});
+$('#memoryFiles').addEventListener('change',e=>{$('#filePreview').innerHTML=[...e.target.files].map(f=>`<span class="file-pill">${escapeHTML(f.name)}</span>`).join('')});
+
+$('#memoryForm').addEventListener('submit',async e=>{e.preventDefault();const id=$('#memoryId').value;const data={owner:$('#memoryOwner').value,title:$('#memoryTitle').value.trim()||'Un recuerdo',date:$('#memoryDate').value,category:$('#memoryCategory').value,emoji:$('#memoryEmoji').value.trim(),description:$('#memoryDescription').value.trim(),updatedAt:Date.now()};let memoryId;if(id){const old=await dbGet('memories',id);memoryId=Number(id);await dbPut('memories',{...old,...data,id:memoryId})}else{memoryId=await dbAdd('memories',{...data,createdAt:Date.now()})}for(const f of [...$('#memoryFiles').files]){if(f.type.startsWith('image/'))await dbAdd('images',{memoryId,blob:f,name:f.name,type:f.type,createdAt:Date.now()})}closeModal('memoryModal');toast(id?'Recuerdo actualizado':'Recuerdo guardado');await renderAllMemories()});
+
+async function editMemory(id){const m=await dbGet('memories',id);if(!m)return;resetMemoryForm(m.owner);$('#memoryId').value=m.id;$('#memoryTitle').value=m.title||'';$('#memoryDate').value=m.date||'';$('#memoryCategory').value=m.category||'Recuerdo';$('#memoryEmoji').value=m.emoji||'';$('#memoryDescription').value=m.description||'';$('#memoryModalTitle').textContent='Editar recuerdo';openModal('memoryModal')}
+async function deleteMemory(id){if(!confirm('¿Eliminar este recuerdo y todas sus imágenes?'))return;const imgs=await byIndex('images','memoryId',Number(id));for(const im of imgs)await dbDelete('images',im.id);await dbDelete('memories',id);toast('Recuerdo eliminado');renderAllMemories()}
+async function deleteImage(id){if(!confirm('¿Eliminar esta imagen?'))return;await dbDelete('images',id);toast('Imagen eliminada');renderAllMemories()}
+
+function dateLabel(s){if(!s)return'';const d=new Date(s+'T12:00:00');return new Intl.DateTimeFormat('es-AR',{day:'2-digit',month:'short',year:'numeric'}).format(d)}
+async function cardHTML(m){const imgs=await byIndex('images','memoryId',m.id);let visual='';if(imgs.length){const url=URL.createObjectURL(imgs[0].blob);objectUrls.push(url);visual=`<div class="memory-img-wrap open-gallery" data-memory="${m.id}"><img src="${url}" alt="${escapeHTML(m.title)}"><span class="image-count">${imgs.length} foto${imgs.length>1?'s':''}</span></div>`}return `<article class="memory-card" style="--r:${((m.id%5)-2)*.32}deg">${visual}<h5>${escapeHTML(m.emoji||'♡')} ${escapeHTML(m.title)}</h5><div class="meta">${escapeHTML(m.category||'Recuerdo')}${m.date?' · '+escapeHTML(dateLabel(m.date)):''}</div>${m.description?`<div class="desc">${escapeHTML(m.description)}</div>`:''}<div class="memory-actions"><button class="icon-btn edit-memory" data-id="${m.id}">editar</button><button class="icon-btn add-photo" data-id="${m.id}">+ foto</button>${imgs.length?`<button class="icon-btn manage-images" data-id="${m.id}">eliminar foto</button>`:''}<button class="icon-btn delete-memory" data-id="${m.id}">eliminar</button></div></article>`}
+async function renderOwner(owner,container){const memories=(await byIndex('memories','owner',owner)).sort((a,b)=>(a.date||'').localeCompare(b.date||'')||a.id-b.id);if(!memories.length){container.innerHTML='<div class="empty-memory">Todavía no agregaste nada acá. Este espacio está esperando una captura, una anécdota o una boludez que valga la pena guardar.</div>';return}container.innerHTML=(await Promise.all(memories.map(cardHTML))).join('')}
+async function renderAllMemories(){objectUrls.forEach(URL.revokeObjectURL);objectUrls=[];for(const owner of ['cap0','cap1','cap2','cap3','cap4','cap5']){const c=document.getElementById('memories-'+owner);if(c)await renderOwner(owner,c)}const globalContainer=$('#globalMemories');if(globalContainer)await renderOwner('global',globalContainer);bindMemoryActions()}
+function bindMemoryActions(){$$('.edit-memory').forEach(b=>b.onclick=()=>editMemory(b.dataset.id));$$('.delete-memory').forEach(b=>b.onclick=()=>deleteMemory(b.dataset.id));$$('.open-gallery').forEach(b=>b.onclick=()=>openGallery(Number(b.dataset.memory)));$$('.add-photo').forEach(b=>b.onclick=()=>quickAddPhotos(Number(b.dataset.id)));$$('.manage-images').forEach(b=>b.onclick=()=>manageImages(Number(b.dataset.id)))}
+async function quickAddPhotos(memoryId){const input=document.createElement('input');input.type='file';input.accept='image/*';input.multiple=true;input.onchange=async()=>{for(const f of [...input.files])if(f.type.startsWith('image/'))await dbAdd('images',{memoryId,blob:f,name:f.name,type:f.type,createdAt:Date.now()});toast('Fotos agregadas');renderAllMemories()};input.click()}
+async function manageImages(memoryId){const imgs=await byIndex('images','memoryId',memoryId);if(!imgs.length)return;const labels=imgs.map((im,i)=>`${i+1}. ${im.name||'imagen'}`).join('\n');const choice=prompt('¿Qué imagen querés eliminar? Escribí el número:\n'+labels);const idx=Number(choice)-1;if(Number.isInteger(idx)&&imgs[idx])deleteImage(imgs[idx].id)}
+
+async function openGallery(memoryId){const m=await dbGet('memories',memoryId);const imgs=await byIndex('images','memoryId',memoryId);if(!imgs.length)return;currentLightbox=imgs.map(im=>({url:URL.createObjectURL(im.blob),caption:m?.description||m?.title||'Recuerdo'}));currentLightboxIndex=0;renderLightbox();$('#lightbox').classList.add('open');$('#lightbox').setAttribute('aria-hidden','false')}
+function renderLightbox(){const x=currentLightbox[currentLightboxIndex];if(!x)return;$('#lightboxImg').src=x.url;$('#lightboxCaption').textContent=`${x.caption} · ${currentLightboxIndex+1}/${currentLightbox.length}`;$('#lightboxPrev').style.visibility=currentLightbox.length>1?'visible':'hidden';$('#lightboxNext').style.visibility=currentLightbox.length>1?'visible':'hidden'}
+function closeLightbox(){if(!$('#lightbox').classList.contains('open'))return;$('#lightbox').classList.remove('open');$('#lightbox').setAttribute('aria-hidden','true');currentLightbox.forEach(x=>URL.revokeObjectURL(x.url));currentLightbox=[];$('#lightboxImg').src=''}
+$('#lightboxClose').onclick=closeLightbox;$('#lightbox').addEventListener('click',e=>{if(e.target===$('#lightbox'))closeLightbox()});$('#lightboxPrev').onclick=()=>{currentLightboxIndex=(currentLightboxIndex-1+currentLightbox.length)%currentLightbox.length;renderLightbox()};$('#lightboxNext').onclick=()=>{currentLightboxIndex=(currentLightboxIndex+1)%currentLightbox.length;renderLightbox()};
+
+const CHAPTER_KEY='juan_brick_custom_chapters_v1';
+const getChapters=()=>JSON.parse(localStorage.getItem(CHAPTER_KEY)||'[]');const saveChapters=a=>localStorage.setItem(CHAPTER_KEY,JSON.stringify(a));
+$('#addChapterBtn').onclick=()=>{ $('#chapterForm').reset();openModal('chapterModal') };
+$('#chapterForm').onsubmit=e=>{e.preventDefault();const arr=getChapters();arr.push({id:Date.now(),title:$('#chapterTitle').value.trim(),date:$('#chapterDate').value.trim(),text:$('#chapterText').value.trim()});saveChapters(arr);closeModal('chapterModal');renderChapters();toast('Nuevo capítulo agregado')};
+function renderChapters(){const c=$('#customChapters');const arr=getChapters();c.innerHTML=arr.map(x=>`<article class="custom-chapter"><button class="icon-btn delete-custom" data-id="${x.id}">eliminar</button><div class="date">${escapeHTML(x.date)}</div><h4>${escapeHTML(x.title)}</h4><p>${escapeHTML(x.text)}</p></article>`).join('');$$('.delete-custom',c).forEach(b=>b.onclick=()=>{if(!confirm('¿Eliminar este capítulo?'))return;saveChapters(getChapters().filter(x=>x.id!=b.dataset.id));renderChapters()})}
+
+const NOTES_KEY='juan_brick_notes_v1';
+const getNotes=()=>JSON.parse(localStorage.getItem(NOTES_KEY)||'[]');const saveNotes=a=>localStorage.setItem(NOTES_KEY,JSON.stringify(a));
+const addNoteBtn=$('#addNoteBtn');if(addNoteBtn)addNoteBtn.onclick=()=>{$('#noteForm').reset();openModal('noteModal')};
+$('#noteForm').onsubmit=e=>{e.preventDefault();const a=getNotes();a.push({id:Date.now(),title:$('#noteTitle').value.trim(),text:$('#noteText').value.trim()});saveNotes(a);closeModal('noteModal');renderNotes();toast('Papelito agregado')};
+function renderNotes(){const wall=$('#notesWall');if(!wall)return;$$('.note.user-note',wall).forEach(n=>n.remove());getNotes().forEach((n,i)=>{const el=document.createElement('article');el.className='note user-note editable';el.style.setProperty('--r',((i%5)-2)*.8+'deg');el.innerHTML=`<h3>${escapeHTML(n.title)}</h3><p>${escapeHTML(n.text)}</p>`;el.title='Clic para eliminar este papelito';el.onclick=()=>{if(confirm('¿Sacar este papelito del muro?')){saveNotes(getNotes().filter(x=>x.id!==n.id));renderNotes()}};wall.appendChild(el)})}
+
+function updateCounter(){const start=new Date(2026,3,25,0,0,0);const now=new Date();if(now<start)return;let months=(now.getFullYear()-start.getFullYear())*12+(now.getMonth()-start.getMonth());let anchor=new Date(start);anchor.setMonth(anchor.getMonth()+months);if(anchor>now){months--;anchor=new Date(start);anchor.setMonth(anchor.getMonth()+months)}const diff=now-anchor;const days=Math.floor(diff/86400000);const hours=Math.floor(diff/3600000)%24;const minutes=Math.floor(diff/60000)%60;$('#cMonths').textContent=months;$('#cDays').textContent=days;$('#cHours').textContent=hours;$('#cMinutes').textContent=minutes;$('#heroCounter').textContent=`${months} meses, ${days} días y contando...`}
+updateCounter();setInterval(updateCounter,30000);
+
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.09});$$('.reveal').forEach(el=>io.observe(el));
+const topBtn=$('#toTop');window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>700),{passive:true});topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+openDB().then(async()=>{await renderAllMemories();renderChapters();renderNotes()}).catch(err=>{console.error(err);toast('Tu navegador no permitió abrir IndexedDB')});
+})();
+</script>
+</body>
+</html>
